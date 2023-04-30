@@ -1,0 +1,301 @@
+html{
+    font-size: 16px;
+}
+
+body{
+    margin: 0;
+}
+
+/*======== Main ========*/
+
+main {
+    display: flex;
+    background-image: url('../images/main-background.jpg');
+    height: 49vw;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+}
+
+main::before {
+    content: "";
+    background-color: #0505057a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 49vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+    z-index: 1;
+    margin-bottom: 15vw;
+    background-color: #353535;
+    color: white;
+    text-shadow: 1px 1px 9px black;
+    border-radius: 17px;
+    font-family: 'Chivo Mono', monospace;
+    align-items: center;
+    min-width: 300px;
+}
+
+.container *{
+    margin: 2%;
+}
+
+main div button {
+    font-family: 'Chivo Mono', monospace;
+    width: 30%;
+    height: 3vw;
+    min-height: 30px;
+    font-size: 1.4rem;
+    background-color: #f2f2f2;
+    min-width: 114px;
+}
+main div span:nth-child(1){
+    font-size: 3rem;
+}
+
+main div span:nth-child(2){
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width:970px) and (orientation:portrait){
+    .container{
+        margin: 0;
+    }
+    main{
+        height:80vh;
+    }
+    main::before{
+        height:80vh;
+    }
+}
+
+
+
+/*======== Description ========*/
+
+section#description {
+    background-color: #111111;
+    text-align: center;
+    padding-top: 3%;
+}
+
+section#description span {
+    font-size: 2.5rem;
+    color: white;
+    font-family: 'Chivo Mono', monospace;
+}
+
+div#img-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#img-container .img {
+    height: 23vw;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 2%;
+}
+
+#img-container .img:nth-child(1){
+    background-image: url('../images/running-1.jpg');
+}
+
+#img-container .img:nth-child(2){
+    background-image: url('../images/running-2.jpg');
+}
+
+#img-container .img:nth-child(3){
+    background-image: url('../images/running-3.jpg');
+}
+
+@media only screen and (max-width:1280px){
+    div#img-container {
+        flex-wrap: wrap;
+    }
+
+    #img-container .img{
+        height:20rem;
+        width:23rem;
+    }
+
+}
+
+@media only screen and (max-width:820px){
+    #img-container .img {
+        height: 73vw;
+        width: 100%;
+    }
+}
+
+/*======== Quote ========*/
+
+section#quote {
+    background-color: #373737;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 1px 1px 2px black;
+    padding-left: 1%;
+    width: 99%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+section#quote span{
+    color:white;
+    margin:1%;
+}
+
+section#quote span:nth-child(1){
+    font-size: 2rem;
+}
+section#quote span:nth-child(2){
+    font-size: 1.3rem;
+}
+
+@media only screen and (min-width:670px) and (max-width:1340px){
+    section#quote span{
+        margin:1.5%;
+    }
+}
+
+@media only screen and (max-width:670px){
+    section#quote span{
+        margin:2%;
+    }
+}
+
+/*======== Join-us ========*/
+
+section#join-us {
+    background-color: #111111;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+
+section#join-us .flex{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    grid-column-start: 2;
+    align-items: center;
+}
+
+.flex *{
+    margin:3%;
+}
+
+.flex span:nth-child(1) {
+    font-size: 2.5rem;
+    color: white;
+    letter-spacing: 4px;
+    font-family: 'Chivo Mono', monospace;
+}
+
+.flex span:nth-child(3) {
+    font-size: 2.3rem;
+    color: white;
+    font-family: 'Chivo Mono', monospace;
+}
+
+section#join-us div .img {
+    background-image: url('../images/join-us.jpg');
+    width: 100%;
+    height: 48vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+@media only screen and (max-width:1000px){
+    section#join-us div .img {
+        height:72vh;
+    }
+    .flex span:nth-child(1) {
+        font-size: 2.3rem;
+    }
+    .flex span:nth-child(3) {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    section#join-us div .img {
+        width:167%;
+    }
+}
+
+/*======== Footer ========*/
+footer {
+    width: 100%;
+    background-color: #373737;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+}
+footer span:nth-child(1){
+    margin: 0 1%;
+}
+footer span {
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Chivo Mono', monospace;
+    text-shadow: 1px 1px 2px black;
+    margin: 0 2%;
+}
+
+.contact-container img {
+    width: 3rem;
+    height: auto;
+}
+
+.contact-container {
+    width: min-content;
+    display: flex;
+    margin: 0 1%;
+    align-items: center;
+}
+
+@media only screen and (max-width:800px){
+    footer img {
+        width: 4%;
+    }
+}
+
+@media only screen and (max-width:540px){
+    footer span {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width:1000px){
+    footer {
+        height: 6vw;
+    }
+}
+
+@media only screen and (max-width:670px){
+    footer{
+        flex-direction: column;
+        height: 15%;
+    }
+    footer span:nth-child(1){
+        display: none;
+    }
+    .contact-container{
+        margin: 1% 1%;
+    }
+}
+
+
